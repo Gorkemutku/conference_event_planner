@@ -3,14 +3,19 @@ import React from 'react'
 const AboutUs = () => {
     return (
         <div className="aboutus_container">
+            <h2>About Paradise Nursery</h2>
             <p>
-                Welcome to BudgetEase Solutions, your trusted partner in simplifying budget management and financial solutions. At BudgetEase, we understand the importance of effective budget planning and strive to provide intuitive, user-friendly solutions to meet the diverse needs of our clients.
+                Welcome to Paradise Nursery, your one-stop destination for beautiful indoor plants and green living solutions. At Paradise Nursery, we believe that every home deserves a touch of nature to create a peaceful and refreshing environment.
             </p>
-            <p>With a commitment to efficiency and innovation, we empower individuals and businesses to take control of their finances and achieve their goals with ease.</p>
-            <p>At BudgetEase Solutions, our mission is to make budgeting effortless and accessible for everyone. Whether you're a small business owner, a busy professional, or an individual looking to manage your personal finances, we offer tailored solutions to streamline your budgeting process.
+            <p>
+                Our curated collection features a wide variety of indoor plants, from low-maintenance succulents to lush tropical specimens. Whether you're a seasoned plant enthusiast or just beginning your plant parent journey, we have the perfect green companions for you.
             </p>
-            {/* <p>                Our team of experts is dedicated to providing exceptional service and support, guiding you every step of the way to financial success. With BudgetEase Solutions, you can trust us to simplify your finances and pave the way for a brighter financial future.
-            </p> */}
+            <p>
+                With a commitment to quality and customer satisfaction, we ensure that every plant that leaves our nursery is healthy, vibrant, and ready to thrive in your home. Our expert team is dedicated to providing exceptional service and support, helping you choose the right plants and offering care tips to ensure your plants flourish.
+            </p>
+            <p>
+                At Paradise Nursery, we're passionate about bringing nature closer to you and creating a greener, more beautiful world, one plant at a time.
+            </p>
         </div>
     )
 }

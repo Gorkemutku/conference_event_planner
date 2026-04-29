@@ -1,38 +1,43 @@
-import React, { useState } from "react";
-import "./App.css";
-import ConferenceEvent from "./ConferenceEvent";
-import AboutUs from "./AboutUs";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './Navbar';
+import ProductList from './ProductList';
+import CartItem from './CartItem';
+import AboutUs from './AboutUs';
+import './App.css';
 
 function App() {
-  const [showVenue, setShowVenue] = useState(false);
-
-  const handleGetStarted = () => {
-    setShowVenue(true);
-  };
-
   return (
-    <>
-      <header className="first_page">
-        <div className="main_event">
-          <div className="first_page_name_btn">
-            <h1 className="budget_heading">Conference Expense Planner</h1>
-            <p className="budget_sentence"> Plan your next major event with us!</p>
-            <div className="getstarted_btn">
-              <button onClick={() => handleGetStarted()} className="get-started-btn">
-                Get Started
-              </button>
-            </div>
-          </div>
-          <div className="aboutus_main">
-            <AboutUs />
-          </div>
-        </div>
-      </header>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/cart" element={<CartItem />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+  );
+}
 
-      <div className={`event-list-container ${showVenue ? 'visible' : ''}`}>
-        <ConferenceEvent />
+function HomePage() {
+  return (
+    <div className="home_page">
+      <div className="home_background"></div>
+      
+      <div className="home_content">
+        <div className="home_hero">
+          <h1 className="home_title">🌺 Paradise Nursery</h1>
+          <p className="home_subtitle">Bring Nature Home</p>
+          
+          <AboutUs />
+          
+          <a href="/products" className="get_started_btn">
+            Get Started →
+          </a>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
